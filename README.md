@@ -12,4 +12,4 @@ NB! -- Known architecture issues:
 To run it:
 - install Python 3.x on your machine
 - install Selenium using cmd> *pip install selenium*
-- run in the project rot directory using cmd> *python test01_Login.py*
+- run in the project root directory using cmd> *python test01_Login.py*
