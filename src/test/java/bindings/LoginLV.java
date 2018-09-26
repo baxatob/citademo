@@ -9,11 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 
+
 public class LoginLV {
 
     WebDriver driver;
     LandingPage landingPage;
     StartPage startPage;
+    Boolean usingIDcard;
 
     @Given("^that user on the latvian landing page$")
     public void that_user_on_the_latvian_landing_page() {
@@ -21,12 +23,12 @@ public class LoginLV {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         landingPage = new LandingPage(driver);
-        landingPage.navigate();
+        landingPage.navigate("lv");
     }
 
     @When("^user enter invalid credentials and click on login button$")
     public void user_enter_userID_and_click_on_login_button() {
-        landingPage.login("FAKE", "FAKE");
+        landingPage.login(true,"FAKE", "FAKE");
 
     }
 
