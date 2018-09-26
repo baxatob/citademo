@@ -8,7 +8,7 @@ NB! -- Known architecture issues:
 2) Page Object approach is NOT used here. 
 
 
-# PS -- citademo_py contains the same test example implemented using Python. 
+# PS -- citademo_py contains the same test example implemented using Python and Page Object approach 
 To run it:
 - install Python 3.x on your machine -> https://www.python.org/
 - install Selenium using cmd> *pip install selenium*
