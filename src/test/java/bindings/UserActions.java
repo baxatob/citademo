@@ -51,13 +51,11 @@ public class UserActions {
 
     @When("^user login using PIN-calculator$")
     public void user_login_by_pin() {
-        user = new User();
         landingPage.login("PIN", "FAKE", "FAKE");
     }
 
     @When("^user login using ID-card$")
     public void user_login_by_id() {
-        user = new User();
         landingPage.login("ID", "FAKE", "FAKE");
     }
 
