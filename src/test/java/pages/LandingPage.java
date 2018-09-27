@@ -7,16 +7,15 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LandingPage {
-    WebDriver driver;
+public class LandingPage extends BasePage {
+
+    public LandingPage(WebDriver driver) {
+        super(driver);
+    }
+
     String URL_LV = "https://www.citadele.lv/lv/";
     String URL_LT = "https://www.citadele.lt/en/";
     String URL_EE = "https://www.citadele.ee/en/";
-
-    public LandingPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
 
     @FindBy(how = How.XPATH, using = "//input[@value='default']/ancestor::div[contains(@class, 'service')]/a")
     private WebElement link_PINcalculator;

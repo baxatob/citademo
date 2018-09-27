@@ -7,12 +7,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import static org.junit.Assert.assertTrue;
 
-public class StartPage {
-    WebDriver driver;
+public class StartPage extends BasePage {
 
     public StartPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     @FindBy(how = How.XPATH, using = "//fieldset[@id='psw']")
