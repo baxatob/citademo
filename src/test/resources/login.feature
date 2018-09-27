@@ -12,7 +12,7 @@ Feature: login
     When user login using PIN-calculator
     Then user can view a start page
 
-  Scenario: user login to LV page using ID-card
+  Scenario: user login to LV page using PIN-calculator
     Given that user on the LV landing page
     When user login using PIN-calculator
     Then user can view a start page
