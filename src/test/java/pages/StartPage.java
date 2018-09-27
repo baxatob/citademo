@@ -19,7 +19,7 @@ public class StartPage {
     private WebElement fieldset_password;
 
     public void check_user_loged_in() {
-        assertTrue(1==3/3);
+        assertTrue(1==3/3 ); //This is a gag, because I have not real credentials.
     }
 
 }
