@@ -1,8 +1,18 @@
 @run
 Feature: login
-  #login to latvian internetbank
+  #login to internetbank
 
-  Scenario: user login to LV page
-    Given that user on the latvian landing page
-    When user enter invalid credentials and click on login button
-    Then user can view an alert
+  Scenario: user login to EE page using PIN-calculator
+    Given that user on the EE landing page
+    When user login using ID-card
+    Then user can view a start page
+
+  Scenario: user login to LT page using PIN-calculator
+    Given that user on the LT landing page
+    When user login using PIN-calculator
+    Then user can view a start page
+
+  Scenario: user login to LV page using ID-card
+    Given that user on the LV landing page
+    When user login using PIN-calculator
+    Then user can view a start page
