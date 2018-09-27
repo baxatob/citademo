@@ -2,7 +2,7 @@
 Feature: login
   #login to internetbank
 
-  Scenario: user login to EE page using PIN-calculator
+  Scenario: user login to EE page using ID-card
     Given that user on the EE landing page
     When user login using ID-card
     Then user can view a start page
