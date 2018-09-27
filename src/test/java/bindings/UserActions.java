@@ -24,9 +24,9 @@ public class UserActions {
         this.driver.manage().window().maximize();
     }
 
-    private void user_close_browser() {
+    /*private void user_close_browser() {
         this.driver.close();
-    }
+    }*/
 
     @Given("^that user on the LV landing page$")
     public void user_on_the_LV_landing_page() {
@@ -59,14 +59,44 @@ public class UserActions {
         landingPage.login("ID", "FAKE", "FAKE");
     }
 
+    @When("^user clicks on link EN$")
+    public void user_clicks_on_link_EN() {
+        landingPage.switch_language("en");
+    }
+
+    @When("^user clicks on link RU$")
+    public void user_clicks_on_link_RU() {
+        landingPage.switch_language("ru");
+    }
+
+    @When("^user clicks on link LV$")
+    public void user_clicks_on_link_LV() {
+        landingPage.switch_language("lv");
+    }
+
     @Then("^user can view a start page$")
     public void user_can_view_a_start_page() throws AssertionError {
         startPage = new StartPage(this.driver);
-        try {
-            startPage.check_user_loged_in();
-        }
-        finally {
-            user_close_browser();
-        }
+        startPage.check_user_loged_in();
+    }
+
+    @Then("^website language is English$")
+    public void website_language_is_English() throws AssertionError {
+        assert this.driver.getTitle() == "Bank Citadele";
+    }
+
+    @Then("^website language is Russian$")
+    public void website_language_is_Russian() throws AssertionError {
+        assert this.driver.getTitle() == "Банк Citadele";
+    }
+
+    @Then("^website language is Latvian$")
+    public void website_language_is_Latvian() throws AssertionError {
+        assert this.driver.getTitle() == "Banka Citadele";
+    }
+
+    @Then("^user close browser$")
+    public void user_close_browser() {
+        this.driver.quit();
     }
 }

@@ -15,18 +15,36 @@ public class BasePage {
     }
 
     @FindBy(how = How.XPATH, using = "//a[@hreflang='en']")
-    private WebElement link_switchToEnglish;
+    public WebElement link_switchToEnglish;
 
     @FindBy(how = How.XPATH, using = "//a[@hreflang='ru']")
-    private WebElement link_switchToRussian;
+    public WebElement link_switchToRussian;
 
     @FindBy(how = How.XPATH, using = "//a[@hreflang='lv']")
-    private WebElement link_switchToLatvian;
+    public WebElement link_switchToLatvian;
 
     @FindBy(how = How.XPATH, using = "//a[@hreflang='lt']")
-    private WebElement link_switchToLithuanian;
+    public WebElement link_switchToLithuanian;
 
     @FindBy(how = How.XPATH, using = "//a[@hreflang='et']")
-    private WebElement link_switchToEstonian;
+    public WebElement link_switchToEstonian;
+
+    public void switch_language(String lang) {
+        if(lang=="en") {
+            link_switchToEnglish.click();
+        }
+        else if(lang=="ru") {
+            link_switchToRussian.click();
+        }
+        else if(lang=="lv") {
+            link_switchToLatvian.click();
+        }
+        else if(lang=="lt") {
+            link_switchToLithuanian.click();
+        }
+        else if(lang=="ee") {
+            link_switchToEstonian.click();
+        }
+    }
 
 }
