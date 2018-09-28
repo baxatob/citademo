@@ -1,5 +1,6 @@
 # -- citademo
 Sample task for Java + Cucumber + Webdriver
+
 Run as Maven project -> lifecycle "test"
 
 Project structure:
